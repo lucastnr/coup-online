@@ -1,11 +1,11 @@
-import { Card, Hand } from "../services/types";
+import { Card, Cards } from "../services/types";
 
 class User {
   private _id?: number;
   private _dead: boolean = false;
-  private _hand: Hand = [];
+  private _hand: Cards = [];
   private _coins: number = 0;
-  public extraHand: Hand = [];
+  public extraHand: Cards = [];
 
   constructor(id: number, avaiableCards: Card[]) {
     this._id = id;
