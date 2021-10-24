@@ -1,7 +1,7 @@
 import { CardName } from "../services/types";
 
 class Card {
-  private dead: boolean = false;
+  private _dead: boolean = false;
   private _cardName: CardName;
 
   constructor(cardName: CardName) {
@@ -9,11 +9,16 @@ class Card {
   }
 
   /** Mata carta */
-  public killCard = () => this.dead = true;
+  public killCard = () => this._dead = true;
 
   /** Retorna o nome da carta */
   public get cardName() {
-    return this._cardName
+    return this._cardName;
+  };
+
+  /** Retorna se a carta está mota */
+  public get dead() {
+    return this._dead;
   };
 }
 
