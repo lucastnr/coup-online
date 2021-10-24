@@ -16,3 +16,5 @@ class Card {
     return this._cardName
   };
 }
+
+export default Card;
