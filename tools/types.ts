@@ -1,0 +1,1 @@
+export type CardName = "assassino" | "capitao" | "condensa" | "duque" | "embaixador";
