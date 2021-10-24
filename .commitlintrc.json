@@ -10,7 +10,8 @@
         [
           "Client",
           "Server",
-          "Monorepo",
+          "Monorepo"
         ]
       ]
     }
+}
