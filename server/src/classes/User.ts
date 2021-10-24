@@ -19,6 +19,10 @@ class User {
   public get player() {
     return this._player;
   }
+  /** Retorna o socket */
+  public get socket() {
+    return this._socket;
+  }
 }
 
 export default User;
