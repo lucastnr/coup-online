@@ -6,7 +6,8 @@ import duque from "../../images/cards/duque.jpg";
 import embaixador from "../../images/cards/embaixador.jpg";
 import { CardType } from '../../services/types';
 
-type HTMLImage = React.ImgHTMLAttributes<HTMLImageElement>;
+/** Tipo que qualquer img pode receber */
+type HTMLImage = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "src">;
 
 interface ICardProps extends HTMLImage {
   card: CardType;
