@@ -1,4 +1,4 @@
-import Server from "./classes/server";
+import Server from "./classes/Server";
 const port = process.env.PORT || 1234;
 
 
