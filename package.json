@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all --parallel 'start:**'",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start",
+    "postinstall": "npm-run-all 'install:**'",
     "install:client": "cd client && npm i",
-    "install:server": "cd server && npm i",
-    "postinstall": "npm-run-all 'install:**'"
+    "install:server": "cd server && npm i"
   },
   "repository": {
     "type": "git",
