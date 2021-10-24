@@ -12,6 +12,7 @@ class User {
   /** Cria o jogador */
   public createPlayer = (id: number) => {
     this._player = new Player(id);
+    return this._player;
   }
 
   /** Retorna o jogador */
