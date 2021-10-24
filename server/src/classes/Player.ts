@@ -7,7 +7,7 @@ class Player {
   private _coins: number = 0;
   public extraHand: Cards = [];
 
-  constructor(id: number, avaiableCards: Card[]) {
+  constructor(id: number) {
     this._id = id;
   }
   
