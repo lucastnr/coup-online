@@ -5,10 +5,10 @@ class App {
   /** Socket */
   private io?: Server;
   /** Porta do servidor */
-  private PORT?: Port;
+  private PORT?: number;
 
   public start(port: Port) {
-    this.PORT = port;
+    this.PORT = port as number;
 
     this.initializeSocket();
     this.listen();
@@ -16,17 +16,24 @@ class App {
 
   /** Cria referência e inicializa io */
   private initializeSocket() {
-    this.io = new Server();
+    const port = this.PORT;
+    if (!port) return;
+    this.io = new Server(port);
   }
 
   /** Ativa listeners */
   private listen() {
-    this.io?.on("connection", this.connectionHandler)
+    const io = this.io;
+    if (!io) return;
+
+    io.on("connection", this.connectionHandler);
   }
 
   /** Lida com as funções da conexão */
   private connectionHandler(socket: Socket) {
+    console.log("connected");
     socket.on("teste", () => console.log("teste"));
+    socket.on("disconnect", () => console.log("disconnect"));
   }
 }
 
