@@ -3,10 +3,12 @@ import { CardName, Cards } from "./types";
 
 const possibleCards: CardName[] = [ "assassino", "capitao", "condensa", "duque", "embaixador" ];
 
+/** Retorna um numéro inteiro aleatório em intervalo */
 export function randomIntFromInterval(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+/** Escolhe uma carta a partir de uma lista de cartas */
 export const pickCard = (cards: Cards) => {
   const cardsLen = cards.length;
   const selectedIndex = randomIntFromInterval(0, cardsLen);
