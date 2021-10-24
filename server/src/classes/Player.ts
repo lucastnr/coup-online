@@ -1,6 +1,6 @@
 import { Card, Cards } from "../services/types";
 
-class User {
+class Player {
   private _id?: number;
   private _dead: boolean = false;
   private _hand: Cards = [];
@@ -70,4 +70,4 @@ class User {
 
 }
 
-export default User;
+export default Player;
