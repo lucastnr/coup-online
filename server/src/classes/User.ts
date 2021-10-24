@@ -63,9 +63,9 @@ class User {
   }
 
   /** Dá moedas ao jogador na quantidade passada */
-  public giveCoins = (quantity: number) => this.coins += quantity;
+  public giveCoins = (quantity: number) => this._coins += quantity;
   /** Remove moedas do jogador na quantidade passada */
-  public removeCoins = (quantity: number) => this.coins -= quantity;
+  public removeCoins = (quantity: number) => this._coins -= quantity;
 
 
 }
