@@ -1,4 +1,5 @@
-import { Card, Cards } from "../services/types";
+import { Cards } from "../services/types";
+import Card from "./Card";
 
 class Player {
   private _id?: number;
@@ -59,7 +60,7 @@ class Player {
     const cardToKill = hand[index];
 
     if (!cardToKill) return;
-    cardToKill.dead = true;
+    cardToKill.killCard();
   }
 
   /** Dá moedas ao jogador na quantidade passada */
