@@ -14,8 +14,8 @@ class User {
   }
 
   /** Cria o jogador */
-  public createPlayer = (id: number) => {
-    this._player = new Player(id);
+  public createPlayer = () => {
+    this._player = new Player();
     return this._player;
   }
 
@@ -32,8 +32,11 @@ class User {
     return this._uuid;
   }
   public sendUserData() {
+    const player = this._player;
+    if (!player) return;
+
     const socket = this._socket;
-    socket.send("userData", this._player);
+    socket.emit("userData", player);
   }
 }
 

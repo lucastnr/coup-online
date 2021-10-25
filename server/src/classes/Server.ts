@@ -51,6 +51,7 @@ class App {
     this.appendUser(user);
     console.log("[!] Usuário contectado");
 
+    user.createPlayer();
     user.sendUserData();
     socket.on("disconnect", () => this.disconnectionHandler(user));
   }

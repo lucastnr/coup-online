@@ -2,20 +2,10 @@ import { Cards } from "../services/types";
 import Card from "./Card";
 
 class Player {
-  private _id?: number;
   private _dead: boolean = false;
   private _hand: Cards = [];
   private _coins: number = 0;
   public extraHand: Cards = [];
-
-  constructor(id: number) {
-    this._id = id;
-  }
-  
-  /** Retorna o id do jogador */
-  public get id() {
-    return this._id; 
-  }
 
   /** Retorna a mão do jogador */
   public get hand() {
