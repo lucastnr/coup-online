@@ -8,17 +8,18 @@ export const AppProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<object | null>(null);
 
   const userReceived = (userData: any) => {
+    console.log("userData");
     console.log(userData);
   }
 
   useEffect(() => {
-    socket.on("user", userReceived);
+    socket.on("userData", userReceived);
   }, [])
   
   const context = {
     user,
     socket,
-    signed: !!user
+    signed: !!socket.connected && !!user
   }
   return (
     <AppContext.Provider value={context}>
