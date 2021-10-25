@@ -33,4 +33,4 @@ export const createDeck = (quantityByRole: number) => {
   return deck;
 }
 
-export const generateUuid = uuid();
+export const generateUuid = uuid;
