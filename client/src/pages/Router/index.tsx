@@ -1,21 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
-  BrowserRouter,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import AppContext from '../../contexts/AppContext';
 import Home from '../Home';
 
-const Router = () => {
+const Router: React.FC = () => {
+  const { socket } = useContext(AppContext);
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+    </Switch>
   )
 }
 

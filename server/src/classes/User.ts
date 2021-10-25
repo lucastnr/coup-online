@@ -1,4 +1,5 @@
 import { Socket } from "socket.io";
+import { Role } from "../services/types";
 import Player from "./Player";
 
 class User {

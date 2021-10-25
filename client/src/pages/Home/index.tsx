@@ -1,14 +1,6 @@
 import React, { useEffect } from 'react';
-import socket from "../../services/socket";
 
-const initializeListeners = () => {
-  socket.connect();
-  socket.send("teste");
-}
-
-function Home() {
-  useEffect(initializeListeners, []);
-
+const Home: React.FC = () => {
   return (
     <div>
     </div>

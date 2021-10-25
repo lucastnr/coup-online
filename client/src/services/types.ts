@@ -4,6 +4,8 @@ export type CardName = "assassino" | "capitao" | "condensa" | "duque" | "embaixa
 
 export type Enviroment = "development" | "test" | "production";
 
-export interface IGlobalInitial {
-    io: Socket;
+export interface IAppContext {
+  signed: boolean;
+  user: object | null;
+  socket: Socket;
 }
