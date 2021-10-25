@@ -1,5 +1,6 @@
 import Card from "../classes/Card";
 import { CardName, Cards } from "./types";
+import {v4 as uuid } from "uuid";
 
 const possibleCards: CardName[] = [ "assassino", "capitao", "condensa", "duque", "embaixador" ];
 
@@ -31,3 +32,5 @@ export const createDeck = (quantityByRole: number) => {
 
   return deck;
 }
+
+export const generateUuid = uuid();
