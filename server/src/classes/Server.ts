@@ -31,9 +31,10 @@ class App {
 
   /** Lida com as funções da conexão */
   private connectionHandler(socket: Socket) {
-    console.log("connected");
-    socket.on("teste", () => console.log("teste"));
-    socket.on("disconnect", () => console.log("disconnect"));
+    console.log("[!] Usuário contectado");
+    socket.on("disconnect", () =>
+      console.log("[!] Usuário desconectado")
+    );
   }
 }
 
