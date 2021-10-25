@@ -42,13 +42,26 @@ class App {
   private disconnectionHandler = (user: User) => {
     const uuid = user.uuid;
     delete this.users[uuid];
+
+    this.updateUserCount();
     console.log("[!] Usuário desconectado")
+  }
+
+  /** Atualiza a contagem de usuários na sala */
+  private updateUserCount = () => {
+    const io = this.io;
+    if (!io) return;
+    
+    const users = this.users;
+    const playerCount = Object.keys(users).length;
+    io.emit("playerCount", playerCount);
   }
 
   /** Lida com as funções de conexão */
   private connectionHandler = (socket: Socket) => {
     const user = new User(socket);
     this.appendUser(user);
+    this.updateUserCount();
     console.log("[!] Usuário contectado");
 
     user.createPlayer();

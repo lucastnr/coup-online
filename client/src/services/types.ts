@@ -8,4 +8,5 @@ export interface IAppContext {
   signed: boolean;
   user: object | null;
   socket: Socket;
+  playerCount?: number;
 }
