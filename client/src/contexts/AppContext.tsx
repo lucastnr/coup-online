@@ -27,8 +27,6 @@ export const AppProvider: React.FC = ({ children }) => {
     playerCount: playerCount
   }
 
-  console.log(context);
-
   return (
     <AppContext.Provider value={context}>
       {children}
