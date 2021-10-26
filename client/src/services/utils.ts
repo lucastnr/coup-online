@@ -5,3 +5,6 @@ const devSocketUrl = "http://localhost:1234/";
 
 export const getSocketUrl = (enviroment: Enviroment) =>
   enviroment === "production" ? productionSocketUrl : devSocketUrl;
+
+export const checkIsMobile = () =>
+  window.innerWidth <= 768;
