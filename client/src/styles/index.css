@@ -8,3 +8,7 @@ body {
   background: #333;
   color: #eee;
 }
+
+* {
+  margin: 0;
+}
