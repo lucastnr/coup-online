@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import socket from "../services/socket";
 import { IAppContext } from "../services/types";
 
@@ -33,5 +33,8 @@ export const AppProvider: React.FC = ({ children }) => {
     </AppContext.Provider>
   )
 }
+
+export const useAppContext = () =>
+  useContext(AppContext);
 
 export default AppContext;
