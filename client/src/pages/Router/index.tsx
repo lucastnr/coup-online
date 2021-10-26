@@ -1,14 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import AppContext from '../../contexts/AppContext';
 import Home from '../Home';
 
 const Router: React.FC = () => {
-  const { socket } = useContext(AppContext);
   return (
     <Switch>
       <Route exact path="/">
